@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "efa2318e-58e9-4f27-abcd-e37c34cc4ca2": {
+      "ProjectGuid": "efa2318e-58e9-4f27-abcd-e37c34cc4ca2",
+      "DisplayName": "JaxPelzerCMSC2240Final",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}
