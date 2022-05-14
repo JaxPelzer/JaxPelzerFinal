@@ -8,9 +8,33 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = JaxPelzerCMSC2240Final
 build_property.RootNamespace = JaxPelzerCMSC2240Final
-build_property.ProjectDir = C:\Users\jaxtp\source\repos\JaxPelzerCMSC2240Final\JaxPelzerCMSC2240Final\
+build_property.ProjectDir = C:\Users\jaxtp\source\repos\JaxPelzerFinal\JaxPelzerCMSC2240Final\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\jaxtp\source\repos\JaxPelzerCMSC2240Final\JaxPelzerCMSC2240Final
+build_property.MSBuildProjectDirectory = C:\Users\jaxtp\source\repos\JaxPelzerFinal\JaxPelzerCMSC2240Final
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/jaxtp/source/repos/JaxPelzerFinal/JaxPelzerCMSC2240Final/Views/DriverInfractions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVySW5mcmFjdGlvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jaxtp/source/repos/JaxPelzerFinal/JaxPelzerCMSC2240Final/Views/DriverInfractions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVySW5mcmFjdGlvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jaxtp/source/repos/JaxPelzerFinal/JaxPelzerCMSC2240Final/Views/DriverInfractions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVySW5mcmFjdGlvbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jaxtp/source/repos/JaxPelzerFinal/JaxPelzerCMSC2240Final/Views/DriverInfractions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVySW5mcmFjdGlvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jaxtp/source/repos/JaxPelzerFinal/JaxPelzerCMSC2240Final/Views/DriverInfractions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVySW5mcmFjdGlvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jaxtp/source/repos/JaxPelzerFinal/JaxPelzerCMSC2240Final/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zaWZrwnDo1hlhKBgn1wDgchFnlFqvAujk8Llkse0O/x6E2NgTSO5MHRiQ1HjORnJmxujQiunQDAH+9xxyJfQlg==",
+  "dgSpecHash": "Fa9tSKu/35zYv5VCWawL5HhHTVj69bIjtLoGDYPSuYupSEiYbkU6oxqC+q+UkD9kvEKqeepF8Zf5l6bFUGnC1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jaxtp\\source\\repos\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final.csproj",
+  "projectFilePath": "C:\\Users\\jaxtp\\source\\repos\\JaxPelzerFinal\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jaxtp\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\jaxtp\\.nuget\\packages\\azure.extensions.aspnetcore.configuration.secrets\\1.2.2\\azure.extensions.aspnetcore.configuration.secrets.1.2.2.nupkg.sha512",

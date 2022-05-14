@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaxtp\\source\\repos\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final.csproj": {}
+    "C:\\Users\\jaxtp\\source\\repos\\JaxPelzerFinal\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaxtp\\source\\repos\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final.csproj": {
+    "C:\\Users\\jaxtp\\source\\repos\\JaxPelzerFinal\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaxtp\\source\\repos\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final.csproj",
+        "projectUniqueName": "C:\\Users\\jaxtp\\source\\repos\\JaxPelzerFinal\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final.csproj",
         "projectName": "JaxPelzerCMSC2240Final",
-        "projectPath": "C:\\Users\\jaxtp\\source\\repos\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final.csproj",
+        "projectPath": "C:\\Users\\jaxtp\\source\\repos\\JaxPelzerFinal\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final.csproj",
         "packagesPath": "C:\\Users\\jaxtp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaxtp\\source\\repos\\JaxPelzerCMSC2240Final\\JaxPelzerCMSC2240Final\\obj\\",
+        "outputPath": "C:\\Users\\jaxtp\\source\\repos\\JaxPelzerFinal\\JaxPelzerCMSC2240Final\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jaxtp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -103,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -19,79 +19,136 @@ namespace JaxPelzerCMSC2240Final.Data
         {
         }
 
-        public virtual DbSet<Course> Courses { get; set; }
-        public virtual DbSet<CourseLinking> CourseLinkings { get; set; }
-        public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<Driver> Drivers { get; set; }
+        public virtual DbSet<Infraction> Infractions { get; set; }
+        public virtual DbSet<InfractionDriverLink> InfractionDriverLinks { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Vehicle> Vehicles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Course>(entity =>
+            modelBuilder.Entity<Driver>(entity =>
             {
-                entity.ToTable("courses");
+                entity.HasIndex(e => e.Ssn, "UQ__Drivers__CA1E8E3C7ACEE700")
+                    .IsUnique();
 
-                entity.Property(e => e.CourseId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("courseID");
+                entity.Property(e => e.DriverId).HasColumnName("driverID");
 
-                entity.Property(e => e.CourseCredits).HasColumnName("courseCredits");
-
-                entity.Property(e => e.CourseName)
+                entity.Property(e => e.FName)
                     .IsRequired()
-                    .HasMaxLength(50)
+                    .HasMaxLength(255)
                     .IsUnicode(false)
-                    .HasColumnName("courseName");
+                    .HasColumnName("fName");
+
+                entity.Property(e => e.LName)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("lName");
+
+                entity.Property(e => e.Ssn)
+                    .IsRequired()
+                    .HasMaxLength(9)
+                    .IsUnicode(false)
+                    .HasColumnName("SSN");
             });
 
-            modelBuilder.Entity<CourseLinking>(entity =>
+            modelBuilder.Entity<Infraction>(entity =>
             {
-                entity.HasKey(e => e.LinkId)
-                    .HasName("PK__courseLi__6C34E1D5FF22C50C");
+                entity.Property(e => e.InfractionId).HasColumnName("infractionID");
 
-                entity.ToTable("courseLinking");
+                entity.Property(e => e.InfractionCost)
+                    .HasColumnType("decimal(19, 2)")
+                    .HasColumnName("infractionCost");
 
-                entity.Property(e => e.LinkId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("Link_Id");
-
-                entity.Property(e => e.CourseId).HasColumnName("courseID");
-
-                entity.Property(e => e.StuId).HasColumnName("stuID");
-
-                entity.HasOne(d => d.Course)
-                    .WithMany(p => p.CourseLinkings)
-                    .HasForeignKey(d => d.CourseId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_courses");
-
-                entity.HasOne(d => d.Stu)
-                    .WithMany(p => p.CourseLinkings)
-                    .HasForeignKey(d => d.StuId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_students");
+                entity.Property(e => e.InfractionDesc)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("infractionDesc");
             });
 
-            modelBuilder.Entity<Student>(entity =>
+            modelBuilder.Entity<InfractionDriverLink>(entity =>
             {
-                entity.HasKey(e => e.StuId)
-                    .HasName("PK__students__AEC9BFAF49BDAC0C");
+                entity.HasKey(e => e.VehicleId)
+                    .HasName("PK__Infracti__5B9D25D271627344");
 
-                entity.ToTable("students");
+                entity.ToTable("InfractionDriverLink");
 
-                entity.Property(e => e.StuId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("stuID");
+                entity.Property(e => e.VehicleId).HasColumnName("vehicleID");
 
-                entity.Property(e => e.Fname)
+                entity.Property(e => e.DriverId).HasColumnName("driverID");
+
+                entity.Property(e => e.InfractionId).HasColumnName("infractionID");
+
+                entity.HasOne(d => d.Driver)
+                    .WithMany(p => p.InfractionDriverLinks)
+                    .HasForeignKey(d => d.DriverId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_InfractionDriverLink_driverID");
+
+                entity.HasOne(d => d.Infraction)
+                    .WithMany(p => p.InfractionDriverLinks)
+                    .HasForeignKey(d => d.InfractionId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_InfractionDriverLink_infractionID");
+            });
+
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.HasIndex(e => e.UserName, "UQ__Users__66DCF95CD39A026A")
+                    .IsUnique();
+
+                entity.Property(e => e.UserId).HasColumnName("userID");
+
+                entity.Property(e => e.Password)
                     .IsRequired()
-                    .HasMaxLength(50)
+                    .HasMaxLength(255)
                     .IsUnicode(false)
-                    .HasColumnName("FName");
+                    .HasColumnName("password");
 
-                entity.Property(e => e.Lname)
+                entity.Property(e => e.Role)
                     .IsRequired()
-                    .HasMaxLength(50)
+                    .HasMaxLength(255)
                     .IsUnicode(false)
-                    .HasColumnName("LName");
+                    .HasColumnName("role");
+
+                entity.Property(e => e.UserName)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("userName");
+            });
+
+            modelBuilder.Entity<Vehicle>(entity =>
+            {
+                entity.Property(e => e.VehicleId).HasColumnName("vehicleID");
+
+                entity.Property(e => e.DriverId).HasColumnName("driverID");
+
+                entity.Property(e => e.LiscencePlateNumber)
+                    .IsRequired()
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("liscencePlateNumber");
+
+                entity.Property(e => e.Make)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("make");
+
+                entity.Property(e => e.Model)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("model");
+
+                entity.HasOne(d => d.Driver)
+                    .WithMany(p => p.Vehicles)
+                    .HasForeignKey(d => d.DriverId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_driverID");
             });
 
             OnModelCreatingPartial(modelBuilder);

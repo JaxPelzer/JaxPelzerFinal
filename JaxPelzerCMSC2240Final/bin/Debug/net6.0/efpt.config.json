@@ -14,19 +14,27 @@
    "SelectedToBeGenerated": 0,
    "Tables": [
       {
-         "Name": "[dbo].[courseLinking]",
+         "Name": "[dbo].[Drivers]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[courses]",
+         "Name": "[dbo].[InfractionDriverLink]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[students]",
+         "Name": "[dbo].[Infractions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Users]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Vehicles]",
          "ObjectType": 0
       }
    ],
-   "UiHint": "(LocalDB)\\MSSQLLocalDB.finalDatabase",
+   "UiHint": "(LocalDB)\\MSSQLLocalDB.pelzerDatabase",
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": false,
    "UseDbContextSplitting": false,
